@@ -1,24 +1,35 @@
-package tictactoegame;
+package tictactoe;
+import java.util.Scanner;
 
-/*@Description- simulator for TicTacToe Game*/
-public class tictactoeGame {
+public class tictactoe {
+	 
+	
 
-	/* UC1 -- Creating a Board */
-	public static char[] createBoard() {
-		char[] board = new char[10];
-		/* initialize board with empty space */
-		for (int pos = 1; pos < board.length; pos++) {
-			System.out.print("board values are " + board[pos] + " ");
-			if (pos % 3 == 0)
-				System.out.println("\n");
-			
-		}
-		return board;
-	}
-
+	
 	public static void main(String[] args) {
-		System.out.println("Welcome to the TicTacToe Game");
-		createBoard();
-	}
+		// TODO Auto-generated method stub
+		System.out.println("WELCOME TO TIC-TAC-TOE GAME\n");
+		
+		char[][] Board = {{' ',' ',' '},
+						  {' ',' ',' '},
+						  {' ',' ',' '}};
+		
+		
+		displayBoard(Board);
+		
+		
+		
+				
+		}
 
-}
+	private static void displayBoard(char[][] Board) {
+		System.out.println(Board[0][0]+ "|" + Board[0][1]+ "|" +Board[0][2]);
+		System.out.println("-+-+-");
+		System.out.println(Board[1][0]+ "|" + Board[1][1]+ "|" +Board[1][2]);
+		System.out.println("-+-+-");
+		System.out.println(Board[2][0]+ "|" + Board[2][1]+ "|" +Board[2][2]);
+	}
+				
+		
+		
+	}
